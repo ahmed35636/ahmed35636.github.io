@@ -65,6 +65,18 @@
     .desc { margin:9px 0 0; font-size:13px; line-height:1.75; color:#bbbbbb; }
     .desc strong { font-weight:650; color:#ffffff; }
     .stack.projects { gap:29px; }
+    .projects .item-top { align-items:center; flex-wrap:wrap; }
+    .project-link {
+      display:inline-flex; align-items:center; justify-content:center; gap:6px;
+      flex:0 0 auto; padding:7px 12px; margin-left:auto;
+      border:1px solid #388bfd; border-radius:7px; background:#1f6feb;
+      color:#ffffff; font-size:12px; font-weight:700; line-height:1.3; white-space:nowrap;
+      transition:background-color .15s ease, border-color .15s ease;
+    }
+    .project-link:hover { background:#388bfd; border-color:#58a6ff; text-decoration:none; }
+    .project-link:focus-visible { outline:2px solid #ffffff; outline-offset:3px; }
+    .project-link svg { width:13px; height:13px; fill:none; stroke:currentColor; stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round; }
+
     .chiprow { display:flex; flex-wrap:wrap; gap:7px; margin-top:11px; }
     .chip { display:inline-block; padding:4px 9px; border:1px solid #303030; border-radius:6px; color:#cecece; font-size:10.5px; line-height:1.25; background:#131313; }
     .two-col { display:grid; grid-template-columns:1fr 1fr; gap:34px; }
@@ -94,6 +106,10 @@
       .logo { width:46px; height:46px; border-radius:11px; }
       .logo img { width:calc(100% - 6px); height:calc(100% - 6px); inset:3px; }
       .item-top { display:block; }
+      .projects .item-top { display:flex; flex-wrap:wrap; align-items:center; }
+      .projects .item-top h3 { flex:1 1 240px; }
+      .project-link { padding:7px 11px; }
+
       .date { display:block; margin-top:5px; }
       .desc { font-size:12.7px; }
       footer { margin-top:48px; }
@@ -166,7 +182,7 @@
             <svg aria-hidden="true" fill="none" viewBox="0 0 32 32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9h7l4 7-4 7H6l-4-7z" transform="translate(3 -1)"/><path d="M19 6h7l4 7-4 7h-7l-4-7z" transform="translate(-2 0)"/><path d="m13 15 6-3m-6 5 6 3"/></svg>
           </div>
           <div>
-            <div class="item-top"><h3>JEV — AI-Powered SOC Alert Triage &amp; Threat Classification</h3></div>
+            <div class="item-top"><h3>JEV — AI-Powered SOC Alert Triage &amp; Threat Classification</h3><a class="project-link" href="https://github.com/ahmed35636/jev-triage" target="_blank" rel="noopener noreferrer" aria-label="View JEV project on GitHub">GitHub <svg aria-hidden="true" viewBox="0 0 16 16"><path d="M5 11 12 4M6 4h6v6"/></svg></a></div>
             <p class="org">AI Security · Detection Engineering</p>
             <p class="desc">Engineered an AI-assisted SOC alert triage platform using TypeSafe AI's Jev model to classify Windows and Sysmon security events, score threat severity, and probabilistically route high-risk or uncertain alerts for deeper LLM investigation.</p>
             <div class="chiprow"><span class="chip">Python</span><span class="chip">Jev</span><span class="chip">Sysmon</span><span class="chip">Threat Classification</span><span class="chip">LLMs</span></div>
@@ -177,7 +193,7 @@
             <svg aria-hidden="true" fill="none" viewBox="0 0 32 32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3 27 7v8c0 7-4 11-11 14C9 26 5 22 5 15V7L16 3Z"/><path d="M11 16l3.5 3.5L22 12"/></svg>
           </div>
           <div>
-            <div class="item-top"><h3>SentinelForge — MCP Security Investigation &amp; Triage Agent</h3></div>
+            <div class="item-top"><h3>SentinelForge — MCP Security Investigation &amp; Triage Agent</h3><a class="project-link" href="https://github.com/ahmed35636/sentinel-forge" target="_blank" rel="noopener noreferrer" aria-label="View SentinelForge project on GitHub">GitHub <svg aria-hidden="true" viewBox="0 0 16 16"><path d="M5 11 12 4M6 4h6v6"/></svg></a></div>
             <p class="org">Agentic Security · Incident Investigation</p>
             <p class="desc">Engineered a Python-based MCP security triage agent that dynamically queries endpoint telemetry, process trees, network activity, and threat intelligence to investigate Windows/Sysmon alerts and prioritize incident response using collected evidence.</p>
             <p class="desc">Built MCP tools covering Sysmon Event IDs 1 and 3, PowerShell activity, LSASS access, PsExec, and scheduled tasks, mapping suspicious behavior to MITRE ATT&amp;CK tactics and techniques.</p>
