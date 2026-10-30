@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Ahmed Chaudhry — computer engineering student interested in Incident Response and Cyber Defense Architecture, threat intelligence, and security automation." />
+  <meta property="og:title" content="Ahmed Chaudhry — Cybersecurity & Engineering" />
+  <meta property="og:description" content="Experience, technical projects, awards and certifications." />
+  <meta property="og:type" content="website" />
+  <title>Ahmed Chaudhry — Cybersecurity & Engineering</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg:#000000;
+      --ink:#ffffff;
+      --secondary:#cccccc;
+      --muted:#a0a0a0;
+      --line:#282828;
+      --paper:#141414;
+      --hover:#202020;
+      --link:#f7f7f7;
+    }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; background:var(--bg); color:var(--ink); font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif; -webkit-font-smoothing:antialiased; }
+    a { color:inherit; text-decoration:none; }
+    a:hover { text-decoration:underline; text-underline-offset:3px; }
+    a:focus-visible { outline:2px solid #eeeeee; outline-offset:4px; border-radius:3px; }
+    .shell { width:min(790px, calc(100% - 48px)); margin:0 auto; padding:87px 0 36px; }
+    .hero { margin-bottom:61px; }
+    h1 { font-size:clamp(38px,6.5vw,53px); font-weight:750; line-height:1.13; letter-spacing:-2.5px; margin:0 0 15px; }
+    .lead { color:#dedede; font-size:17px; line-height:1.7; max-width:650px; margin:0; font-weight:400; }
+    .hero-bottom { display:flex; align-items:center; justify-content:space-between; gap:15px; flex-wrap:wrap; margin-top:24px; }
+    .meta { font-size:13px; color:var(--muted); }
+    .hero-actions { display:flex; align-items:center; gap:18px; font-size:13px; font-weight:600; }
+    .hero-actions a { display:inline-flex; gap:6px; align-items:center; }
+    .arrow { font-size:16px; margin-left:1px; }
+    .section { margin-top:55px; scroll-margin-top:25px; }
+    h2 { font-size:19px; letter-spacing:-.45px; font-weight:730; margin:0 0 27px; }
+    .stack { display:flex; flex-direction:column; gap:28px; }
+    .item { display:grid; grid-template-columns:54px minmax(0,1fr); gap:16px; }
+    .logo {
+      height:53px; width:53px; border:1px solid var(--line); border-radius:13px;
+      background:#121212; display:grid; place-items:center; overflow:hidden; position:relative;
+    }
+    .logo img { display:block; width:calc(100% - 8px); height:calc(100% - 8px); object-fit:contain; object-position:center; position:absolute; inset:4px; margin:auto; z-index:1; }
+    .logo.glentel img { width:calc(100% - 5px); height:calc(100% - 10px); inset:5px 2.5px; }
+    .logo.crowd img { width:calc(100% - 4px); height:calc(100% - 6px); inset:3px 2px; }
+    .logo .fallback { font-weight:850; letter-spacing:-.7px; font-size:14px; color:white; text-align:center; }
+    .logo.ey, .logo.sfu, .logo.crowd, .logo.glentel, .logo.fortinet { background:#111111; }
+    .logo.fsisac { background:#111111; }
+    .logo.fsisac img { width:calc(100% - 5px); height:calc(100% - 9px); inset:4.5px 2.5px; }
+    .logo.project { background:#121212; }
+    .logo.project svg { width:27px; height:27px; stroke:#e5e5e5; }
+    .logo.award { background:#121212; }
+    .logo.award svg { width:25px; height:25px; stroke:#f2d59a; }
+    .logo img[hidden],.logo .fallback[hidden] { display:none; }
+    .item-top { display:flex; align-items:baseline; justify-content:space-between; gap:14px; }
+    h3 { margin:0; font-size:15px; line-height:1.45; letter-spacing:-.16px; font-weight:700; }
+    .date { white-space:nowrap; color:var(--muted); font-size:12px; letter-spacing:.02px; }
+    .org { margin:2px 0 0; font-size:13px; font-weight:600; color:#d3d3d3; }
+    .sub { margin:4px 0 0; font-size:12px; color:var(--muted); }
+    .desc { margin:9px 0 0; font-size:13px; line-height:1.75; color:#bbbbbb; }
+    .desc strong { font-weight:650; color:#ffffff; }
+    .stack.projects { gap:29px; }
+    .chiprow { display:flex; flex-wrap:wrap; gap:7px; margin-top:11px; }
+    .chip { display:inline-block; padding:4px 9px; border:1px solid #303030; border-radius:6px; color:#cecece; font-size:10.5px; line-height:1.25; background:#131313; }
+    .two-col { display:grid; grid-template-columns:1fr 1fr; gap:34px; }
+    .compact { gap:20px; }
+    .compact .item { grid-template-columns:43px minmax(0,1fr); gap:12px; }
+    .compact .logo { width:42px; height:42px; border-radius:11px; }
+    .compact .logo img { width:calc(100% - 6px); height:calc(100% - 6px); inset:3px; }
+    .compact .logo.fsisac img { width:calc(100% - 5px); height:calc(100% - 9px); inset:4.5px 2.5px; }
+    .compact h3 { font-size:13px; }
+    .compact .org { font-size:12px; font-weight:500; color:#adadad; }
+    .compact .date { font-size:11px; }
+    .skills { font-size:13px; line-height:1.9; color:#c5c5c5; }
+    .skills p { margin:0 0 5px; }
+    .skills strong { color:#ffffff; font-weight:700; }
+    footer { display:flex; justify-content:space-between; gap:20px; border-top:1px solid var(--line); margin-top:62px; padding-top:21px; color:#969696; font-size:12px; }
+    footer a { color:#dedede; }
+    @media (prefers-reduced-motion:reduce){ html { scroll-behavior:auto; } }
+    @media (max-width:650px) {
+      .shell { width:calc(100% - 36px); padding-top:57px; }
+      .hero { margin-bottom:46px; }
+      h1 { letter-spacing:-1.8px; }
+      .lead { font-size:15px; }
+      .hero-actions { gap:13px; }
+      .section { margin-top:43px; }
+      .two-col { grid-template-columns:1fr; gap:39px; }
+      .item { grid-template-columns:46px minmax(0,1fr); gap:12px; }
+      .logo { width:46px; height:46px; border-radius:11px; }
+      .logo img { width:calc(100% - 6px); height:calc(100% - 6px); inset:3px; }
+      .item-top { display:block; }
+      .date { display:block; margin-top:5px; }
+      .desc { font-size:12.7px; }
+      footer { margin-top:48px; }
+    }
+    @media print {
+      .shell { width:100%; padding:0; }
+      .hero-actions, footer { display:none; }
+      .section, .item { break-inside:avoid; }
+      body { -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <header class="hero">
+      <h1>Ahmed Chaudhry</h1>
+      <p class="lead">Computer Engineering student at Simon Fraser University interested in Incident Response and Cyber Defense Architecture. I build threat intelligence and security automation tools to support practical cyber defense.</p>
+      <div class="hero-bottom">
+        <span class="meta">Based in British Columbia, Canada</span>
+        <div class="hero-actions">
+          <a href="mailto:ahmed_chaudhry2@hotmail.com">Email me <span aria-hidden="true" class="arrow">↗</span></a>
+          <a href="resume.pdf" download>Resume <span aria-hidden="true" class="arrow">↗</span></a>
+        </div>
+      </div>
+    </header>
+
+    <section class="section" id="experience" aria-labelledby="exp-heading">
+      <h2 id="exp-heading">Experience</h2>
+      <div class="stack">
+        <article class="item">
+          <div class="logo ey" aria-label="EY logo"><img alt="EY" loading="lazy" src="assets/ey.png" /></div>
+          <div>
+            <div class="item-top"><h3>Cybersecurity Consultant Intern — Security Architecture</h3><span class="date">May – Aug 2026</span></div>
+            <p class="org">Ernst &amp; Young (EY)</p>
+            <p class="desc"><strong>What I worked on:</strong> Reduced an enterprise Active Directory attack surface by 30% by addressing 40+ privilege-escalation paths and improving privileged access. Assessed the security and privacy of a GitHub Copilot rollout for 1,500+ users, and developed a six-phase ransomware response playbook through three simulation exercises.</p>
+          </div>
+        </article>
+        <article class="item">
+          <div class="logo sfu" aria-label="SFU logo"><img alt="Simon Fraser University" loading="lazy" src="assets/sfu.png" /></div>
+          <div>
+            <div class="item-top"><h3>Cybersecurity Research Assistant — Threat Intelligence</h3><span class="date">Jan – May 2026</span></div>
+            <p class="org">Simon Fraser University</p>
+            <p class="desc"><strong>What I worked on:</strong> Built a Neo4j threat knowledge graph linking malicious infrastructure, domains, IPs, and indicators. Developed a MITRE ATT&amp;CK-grounded retrieval-augmented generation pipeline with IOC- and GNN-aware re-ranking for evidence-backed APT attribution.</p>
+          </div>
+        </article>
+        <article class="item">
+          <div class="logo crowd" aria-label="CrowdStrike logo"><img alt="CrowdStrike" loading="lazy" src="assets/crowdstrike.png" /></div>
+          <div>
+            <div class="item-top"><h3>Technical Account Manager Intern</h3><span class="date">Jun – Sep 2025</span></div>
+            <p class="org">CrowdStrike</p>
+            <p class="desc"><strong>What I worked on:</strong> Supported customer security-posture assessments through telemetry analysis, investigation of Falcon platform findings, and security monitoring improvements. Worked with Falcon Insight, Next-Gen SIEM, Falcon Cloud Security, and Identity Protection.</p>
+          </div>
+        </article>
+        <article class="item">
+          <div class="logo glentel" aria-label="Glentel logo"><img alt="Glentel" loading="lazy" src="assets/glentel.png" /></div>
+          <div>
+            <div class="item-top"><h3>IT Admin / Network Security Intern</h3><span class="date">Jan – May 2025</span></div>
+            <p class="org">Glentel Inc.</p>
+            <p class="desc"><strong>What I worked on:</strong> Hardened Windows and Active Directory environments using GPOs, least-privilege controls, OU restructuring, and privileged-group reviews. Configured firewall controls, VLANs, DNS, DHCP, and network segmentation across distributed infrastructure.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="technical-projects" aria-labelledby="proj-heading">
+      <h2 id="proj-heading">Technical Projects</h2>
+      <div class="stack projects">
+        <article class="item">
+          <div class="logo project" role="img" aria-label="JEV project icon">
+            <svg aria-hidden="true" fill="none" viewBox="0 0 32 32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9h7l4 7-4 7H6l-4-7z" transform="translate(3 -1)"/><path d="M19 6h7l4 7-4 7h-7l-4-7z" transform="translate(-2 0)"/><path d="m13 15 6-3m-6 5 6 3"/></svg>
+          </div>
+          <div>
+            <div class="item-top"><h3>JEV — AI-Powered SOC Alert Triage &amp; Threat Classification</h3></div>
+            <p class="org">AI Security · Detection Engineering</p>
+            <p class="desc">Engineered an AI-assisted SOC alert triage platform using TypeSafe AI's Jev model to classify Windows and Sysmon security events, score threat severity, and probabilistically route high-risk or uncertain alerts for deeper LLM investigation.</p>
+            <div class="chiprow"><span class="chip">Python</span><span class="chip">Jev</span><span class="chip">Sysmon</span><span class="chip">Threat Classification</span><span class="chip">LLMs</span></div>
+          </div>
+        </article>
+        <article class="item">
+          <div class="logo project" role="img" aria-label="SentinelForge project icon">
+            <svg aria-hidden="true" fill="none" viewBox="0 0 32 32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3 27 7v8c0 7-4 11-11 14C9 26 5 22 5 15V7L16 3Z"/><path d="M11 16l3.5 3.5L22 12"/></svg>
+          </div>
+          <div>
+            <div class="item-top"><h3>SentinelForge — MCP Security Investigation &amp; Triage Agent</h3></div>
+            <p class="org">Agentic Security · Incident Investigation</p>
+            <p class="desc">Engineered a Python-based MCP security triage agent that dynamically queries endpoint telemetry, process trees, network activity, and threat intelligence to investigate Windows/Sysmon alerts and prioritize incident response using collected evidence.</p>
+            <p class="desc">Built MCP tools covering Sysmon Event IDs 1 and 3, PowerShell activity, LSASS access, PsExec, and scheduled tasks, mapping suspicious behavior to MITRE ATT&amp;CK tactics and techniques.</p>
+            <div class="chiprow"><span class="chip">Python</span><span class="chip">MCP</span><span class="chip">Windows / Sysmon</span><span class="chip">MITRE ATT&amp;CK</span><span class="chip">Threat Intelligence</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <div class="two-col">
+      <section class="section" id="awards" aria-labelledby="awards-heading">
+        <h2 id="awards-heading">Honors &amp; Awards</h2>
+        <div class="stack compact">
+          <article class="item">
+            <div class="logo fsisac" aria-label="FS-ISAC logo"><img alt="FS-ISAC" loading="lazy" src="assets/fs-isac.png" /></div>
+            <div><h3>Future Leader in Cybersecurity Scholar</h3><p class="org">FS-ISAC</p></div>
+          </article>
+          <article class="item">
+            <div class="logo sfu"><img alt="Simon Fraser University" loading="lazy" src="assets/sfu.png" /></div>
+            <div><h3>Fortinet Award in Cybersecurity</h3><p class="org">Simon Fraser University</p></div>
+          </article>
+        </div>
+      </section>
+      <section class="section" id="certifications" aria-labelledby="cert-heading">
+        <h2 id="cert-heading">Certifications</h2>
+        <div class="stack compact">
+          <article class="item">
+            <div class="logo crowd"><img alt="CrowdStrike" loading="lazy" src="assets/crowdstrike.png" /></div>
+            <div><h3>CrowdStrike Falcon Administrator</h3><p class="org">FALCON 200</p></div>
+          </article>
+          <article class="item">
+            <div class="logo crowd"><img alt="CrowdStrike" loading="lazy" src="assets/crowdstrike.png" /></div>
+            <div><h3>CrowdStrike Falcon Cloud Security</h3><p class="org">CLOUD 100</p></div>
+          </article>
+        </div>
+      </section>
+    </div>
+
+    <section class="section" id="skills" aria-labelledby="skills-heading">
+      <h2 id="skills-heading">Technical Skills</h2>
+      <div class="skills">
+        <p><strong>Security:</strong> Threat Hunting, Incident Response, Security Architecture, Endpoint Security, Vulnerability Management</p>
+        <p><strong>Tools:</strong> CrowdStrike Falcon, Splunk, Burp Suite, Wireshark, Nmap, Metasploit, SonicWall</p>
+        <p><strong>Systems:</strong> Windows, Linux/Unix, Active Directory, GPOs, DNS, DHCP, TCP/IP, VLANs, Firewalls</p>
+        <p><strong>Programming:</strong> Python, C, C++, Java, PowerShell, Bash, SQL</p>
+      </div>
+    </section>
+    <footer><span>Ahmed Chaudhry © <span id="year">2026</span></span><span><a href="mailto:ahmed_chaudhry2@hotmail.com">Get in touch ↗</a></span></footer>
+  </main>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
